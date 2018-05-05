@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>成员变量：修改、移除节点的属性</title>
+		<style>
+			.div1 {
+				color: red;
+			}
+			
+			.div2 {
+				color: blue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="ddd">随风飘扬的笑</div>
+		<input type="button" value="红色字体" onclick="red()" />
+		<input type="button" value="蓝色字体" onclick="blue()" />
+		<input type="button" value="去除颜色" onclick="remove()" />
+	</body>
+
+	<script>
+		function red() {
+			document.getElementById("ddd").className = "div1";
+		}
+
+		function blue() {
+			document.getElementById("ddd").className = "div2";
+		}
+
+		function remove() {
+			document.getElementById("ddd").className = "";
+		}
+	</script>
+
+</html>

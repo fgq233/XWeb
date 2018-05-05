@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格标签</title>
+	</head>
+
+	<body>
+		<!--
+			合并单元格(删除要合并的另外项，保留第一个)
+			colspan(行)
+			rowspan(列)
+		-->
+		<p>合并行</p>
+		<table border="1px" cellpadding="20px">
+			<tr>
+				<td colspan="2" align="center">11</td>
+				<td>13</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+			</tr>
+		</table>
+
+		<p>合并列</p>
+		
+		<table border="1px" cellpadding="20px">
+			<tr>
+				<td>11</td>
+				<td>12</td>
+				<td rowspan="2" align="center">13</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>22</td>
+			</tr>
+		</table>
+</html>

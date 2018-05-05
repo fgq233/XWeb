@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>隔行换色</title>
+		<style>
+			.current{
+				background-color: cornflowerblue;
+				color: red;
+			}
+		</style>
+	
+		<script>
+			window.onload = function() {
+				var arr = document.getElementsByTagName("li");
+				for(var i = 0; i < arr.length; i++) {
+					if(i % 2 == 0) {
+						arr[i].style.backgroundColor = "pink";
+					}
+					//鼠标悬浮：设置class
+					arr[i].onmouseover = function() {
+						this.className = "current";
+					}
+					//鼠标移开：清空class
+					arr[i].onmouseout = function() {
+						this.className = "";
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul>
+			<li>随风飘扬的笑</li>
+			<li>随风飘扬的笑</li>
+			<li>随风飘扬的笑</li>
+			<li>随风飘扬的笑</li>
+			<li>随风飘扬的笑</li>
+			<li>随风飘扬的笑</li>
+		</ul>
+	</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>超链接标签</title>
+	</head>
+
+	<body>
+		<!--
+			锚点：一个a标签如果具有name/id属性，那么就是页面中的一个锚点
+			href属性指定链接的地址，如果引用一个锚点(同一页面的/其它页面的)，那么点击该链接就会快速滚到锚点部分
+			title属性指定鼠标悬浮到链接上显示的文本信息
+			target属性指定链接打开方式：覆盖原页面、新页面
+		-->	
+		<a href="#anchor" target="">引用锚点</a><br />
+		<a href="https://www.baidu.com/" title="我是悬浮文本">百度一下</a><br />
+		<a href="https://www.baidu.com/" target="_blank">_blank：新的空白标签页中打开链接</a><br />
+		<a href="https://www.baidu.com/" target="_parent">_parent：当前页面打开链接</a><br />
+		<a href="https://www.baidu.com/" target="_search">_search</a><br />
+		<a href="https://www.baidu.com/" target="_self">_self</a><br />
+		<a href="https://www.baidu.com/" target="_top">_top</a><br />
+
+		<a name="anchor">锚点</a>
+</html>

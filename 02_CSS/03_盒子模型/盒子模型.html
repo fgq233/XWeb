@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子模型</title>
+		<!--
+			任何一个盒子都有：width、height、padding、margin、border属性
+			盒子真实宽度 = width +  (左border + 右border) + (左padding + 右padding)
+			盒子真实高度 = height + (上border + 下border) + (上padding + 下padding)
+			border属性：width + style + color
+		-->
+		<style type="text/css">
+			.box1 {
+				width: 100px;
+				height: 100px;
+				padding: 100px;
+				border: 10px solid blue;
+			}
+			/*  两个盒子真实大小完全一致 */
+			.box2 {
+				width: 250px;
+				height: 250px;
+				padding: 25px;
+				border: 10px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">随风飘扬的笑</div>
+		<div class="box2">随风飘扬的笑</div>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表单相关标签</title>
+	</head>
+
+	<body>
+		<!--
+			action：要提交的地址，#代表当前页
+			method：请求方法
+			name：一个页面有多个form表单时用以区分
+			PS：要提交到服务器的标签必须声明name属性(除了按钮)
+		-->
+		
+		<!--
+			1、输入标签<input>：输入类型是由type属性决定
+				type：text 文本
+					  password 密码
+					  hidden 隐藏字段	(不需要用户看见，但是服务器需要这个字段)
+					  file 选择文件
+					  radio	单选		(同一组单选框name值必须一样,value为提交到服务器的值，checked="checked"表示选中)
+					  checkbox 多选(除了可以选择多个，其它和radio类似)
+					  submit 提交表单
+					  reset 重置表单
+					  button 普通按钮
+				只读属性：readonly="readonly"	无法输入内容
+				必填项：required="required"
+				
+			2、下拉列表标签<select>，一个<option>-代表一个下拉项，selected="selected"决定默认选中项
+			3、文本域标签<textarea>	
+		-->
+		
+		<form action="http://www.baidu.com/" method="get" name="register">
+			用户名：<input type="text" name="name" size="66px" placeholder="请输入用户名"/><br /><br />
+
+			<input type="hidden" name="id"/>
+
+			密码:<input type="password" maxlength="6" required="required"/><br /> <br /> 
+
+			身份证号:<input  readonly="readonly"/><br /> <br /> 
+
+			性别<input type="radio" name="sex" value="1" checked="checked"/>男
+				<input type="radio" name="sex" value="2"/>女<br /><br /> 
+
+			爱好：<input type="checkbox" name="hobby"/>游戏
+				<input type="checkbox" name="hobby"/>小说
+				<input type="checkbox" name="hobby"/>音乐<br /><br />
+			
+			头像<input type="file" /><br /><br /> 
+			
+			籍贯<select name="province" >
+				<option value="0" selected="selected">---请选择---</option>
+				<option value="1">北京</option>
+				<option value="2">上海</option>
+				<option value="3">安徽</option>
+			</select>
+			<br /><br />
+			
+			自我介绍<br />
+			<textarea></textarea><br /><br />
+			
+			<input type="submit" value="注册1"/><br />
+			<input type="button" value="注册2"/><br />
+			<input type="reset" value="重置"/><br />
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>层级选择器</title>
+		<style>
+			/* 用空格表示后代
+			 * 后代：子子孙孙都属于后代 
+			 * 空格可以多次出现*/
+			div p{
+				font-size: 20px;
+				color: blueviolet;
+			}
+			div .ul1 p{
+				background-color: pink;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<p>
+				十年前你说生如夏花般绚烂，十年后你说平凡才是唯一的答案
+			</p>
+			<ul class="ul1">
+				<li>
+					<p>十年前你说生如夏花般绚烂，十年后你说平凡才是唯一的答案</p>
+					<p>十年前你说生如夏花般绚烂，十年后你说平凡才是唯一的答案</p>
+				</li>
+				<li>十年前你说生如夏花般绚烂，十年后你说平凡才是唯一的答案</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

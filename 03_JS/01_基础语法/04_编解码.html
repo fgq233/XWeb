@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串编解码</title>
+		<script>
+			var str = "https://github.com";
+			
+			//两个编码区别在于//的编码，第一个不编，第二个会编
+			var str1 = encodeURI(str); //编码
+			var str2 = decodeURI(str1); //解码
+			
+			var str3 = encodeURIComponent(str); //编码
+			var str4 = decodeURIComponent(str2); //解码
+			
+			alert(str1);
+			alert(str2);
+			alert(str3);
+			alert(str4);
+		</script>
+
+	</head>
+
+	<body>
+	</body>
+
+</html>

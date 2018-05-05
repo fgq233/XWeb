@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点的删除</title>
+	</head>
+	<body>
+		<ul id="ddd">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+		</ul>
+	</body>
+	
+	<script>
+		window.onload = function(){
+			var ul = document.getElementById("ddd");//1、获取节点
+			var childArr = ul.children;	//2、ul的所有子节点
+			ul.removeChild(childArr[0]);//3、移除ul第一个子节点
+		}
+	</script>
+</html>
+<!--
+	removeChild(要移除的节点)					移除盒子中的节点
+-->
+

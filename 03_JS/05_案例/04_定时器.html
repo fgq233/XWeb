@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定时器</title>
+		<style>
+			.div1 {
+				color: red;
+			}
+			.div2 {
+				color: blue;
+			}
+		</style>
+<!--
+	window.setInterval(..)	开启定时器，有返回值，用来清除定时器
+	window.clearInterval(.)	清除定时器
+-->
+		<script>
+			window.onload = function(){
+				window.setInterval(change,1000);			//	正确写法
+				//window.setInterval("change()",1000);		//	正确写法
+				//window.setInterval(function(){},1000);	//	正确写法
+				//window.setInterval(change(),1000);		//	错误写法
+			}
+			
+			function change(){
+				if(document.getElementById("ddd").className == "div1"){
+					document.getElementById("ddd").setAttribute("class","div2");
+				}else{
+					document.getElementById("ddd").setAttribute("class","div1");
+				}
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<div id="ddd">随风飘扬的笑</div>
+	</body>
+
+</html>

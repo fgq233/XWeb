@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点的克隆</title>
+	</head>
+	<body>
+		<ul id="ddd">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+		</ul>
+	</body>
+	
+	<script>
+		window.onload = function(){
+			var ul = document.getElementById("ddd");//1、获取节点
+			var newul = ul.cloneNode(true);//2、克隆节点
+			ul.parentNode.appendChild(newul);//3、向ul父节点添加子节点
+		}
+	</script>
+</html>
+<!--
+	cloneNode(boolean)		true：深层节点，连子孙节点一块复制过来
+							false：仅复制本节点
+-->
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>全选、反选</title>
+	</head>
+
+	<body>
+		<input type="button" value="全选" onclick="selectAll()" />
+		<input type="button" value="取消" onclick="selectReverSe()" />
+		<input type="button" value="反选" onclick="selectback()" /><br />
+
+		<input type="checkbox" name="hobby" /><br />
+		<input type="checkbox" name="hobby" /><br />
+		<input type="checkbox" name="hobby" /><br />
+		<input type="checkbox" name="hobby" /><br />
+	</body>
+
+	<script>
+		function selectAll() {
+			var arr = document.getElementsByName("hobby");
+			for(var i = 0; i < arr.length; i++) {
+				arr[i].checked = true;
+			}
+		}
+
+		function selectReverSe() {
+			var arr = document.getElementsByName("hobby");
+			for(var i = 0; i < arr.length; i++) {
+				arr[i].checked = false;
+			}
+		}
+
+		function selectback() {
+			var arr = document.getElementsByName("hobby");
+			for(var i = 0; i < arr.length; i++) {
+				if(arr[i].checked){
+					arr[i].checked = false;
+				}else{
+					arr[i].checked = true;
+				}
+			}
+		}
+	</script>
+
+</html>

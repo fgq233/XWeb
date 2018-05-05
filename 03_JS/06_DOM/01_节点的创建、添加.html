@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点的新建、添加</title>
+	</head>
+	<body>
+		<ul id="ddd"></ul>
+	</body>
+	
+	<script>
+		window.onload = function(){
+			var ul = document.getElementById("ddd");//1、获取节点
+			var li = document.createElement("li");//2、创建节点			★：新建
+			var text = document.createTextNode("A");//3、创建文本节点 	★：新建
+			li.appendChild(text);//	4、将text节点添加到li节点 	★：添加
+			ul.appendChild(li);//	5、将li节点添加到ul节点 		★：添加
+		}
+	</script>
+</html>
+<!--
+	createElement(..)						创建新节点
+	createTextNode(..)						创建文本节点
+	
+	appendChild(插入的节点)					向盒子的最后面添加节点
+	insertBefoe(插入的节点,参照的节点)		向参照的节点前面插入新的节点，第二个参数为null，则新节点放最后		
+-->
+
