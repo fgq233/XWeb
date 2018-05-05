@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文档处理_插入操作</title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script type="text/javascript">
+			/**
+			 * 方法分析：A方法(B)
+			 *  内部插入
+			 * 		1.append(content):内部结尾处，将B追加到A里面去
+			 *  	2.appendTo(content):内部结尾处，将A追加到B里面去
+			 *  	3.prepend(content):内部开始处，将B追加到A里面去
+			 *  	4.prependTo(content):内部开始处，将B追加到A里面去
+			 * 	外部插入
+			 *  	1.after(content):外部，将B追加到A后面
+			 * 		2.before(content):外部，将A追加到B前面
+			 * 		3.insertAfter(content):外部，将A追加到B后面
+			 * 		4.insertBefore(content):外部，将A追加到B前面
+			 */
+
+			$(function() {
+				var $newNode = $("<option>新加的 </option>");
+
+				$("#bt1").click(function() {
+					$("#selectId").append($newNode);
+				});
+				$("#bt2").click(function() {
+					$("#selectId").appendTo($newNode);
+				});
+				$("#bt3").click(function() {
+					$("#selectId").prepend($newNode);
+				});
+				$("#bt4").click(function() {
+					$("#selectId").prependTo($newNode);
+				});
+
+				$("#bt5").click(function() {
+					$("option[value='B']").after($newNode);
+				});
+				$("#bt6").click(function() {
+					$("option[value='B']").before($newNode);
+				});
+				$("#bt7").click(function() {
+					$newNode.insertAfter($("option:contains('B')"));
+				});
+				$("#bt8").click(function() {
+					$newNode.insertBefore($("option:contains('B')"));
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<select id="selectId">
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="C">C</option>
+		</select><br />
+		<input type="button" value="append" id="bt1" /><br />
+		<input type="button" value="appendTo" id="bt2" /><br />
+		<input type="button" value="prepend" id="bt3" /><br />
+		<input type="button" value="prependTo" id="bt4" /><br />
+		<input type="button" value="after" id="bt5" /><br />
+		<input type="button" value="before" id="bt6" /><br />
+		<input type="button" value="insertAfter" id="bt7" /><br />
+		<input type="button" value="insertBefore" id="bt8" /><br />
+	</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>validate</title>
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="../js/messages_zh.js"></script>
+
+		<!-- 语法规则	
+			$("#表单id").validate({ 
+				rules:{
+					name1:校验器,
+					name2:校验器
+				},
+				
+				message:{
+					name1:提示信息,
+					name2:提示信息
+				}
+			});
+		-->
+		<script>
+			$(function() {
+				$("#formId").validate({
+					rules: {
+						username: {
+							required: true,
+							minlength: 3,
+							maxlength: 4
+						},
+						password: {
+							required: true,
+							digits:true,
+							minlength: 6
+						}
+					},
+					messages: {
+						username: {
+							required: "用户名不能为空",
+							minlength: "用户名至少3个字",
+							maxlength: "用户名至多4个字"
+						},
+						password: {
+							required: "密码不能为空",
+							digits: "密码必须是数字",
+							minlength: "密码至少6个字符"
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<form action="#" id="formId">
+			用户名: <input type="text" name="username" /><br /> 
+			密码 :<input type="text" name="password" /><br />
+			<input type="submit" value="注册" />
+		</form>
+	</body>
+
+</html>

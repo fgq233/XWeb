@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>使用工具类遍历方式</title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js" ></script>
+		<script>
+			$(function() {
+				$("#checkallbox").click(function() {
+					var isChecked = this.checked;
+					//使用工具类遍历方式，语法：$.each(array，function(i,j){})  
+					//	array代表被遍历的对象，i代表角标，j代表当前遍历的内容
+					$.each($("input[name='hobby']"), function(i, j) {
+						j.checked = isChecked;
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="checkbox" id="checkallbox" /> <br/>
+		<input type="checkbox" name="hobby" value="足球" /> 足球
+		<input type="checkbox" name="hobby" value="篮球" /> 篮球
+		<input type="checkbox" name="hobby" value="游泳" /> 游泳
+		<input type="checkbox" name="hobby" value="唱歌" /> 唱歌 
+	</body>
+
+</html>

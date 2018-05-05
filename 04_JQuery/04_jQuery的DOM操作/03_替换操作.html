@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文档处理_替换操作</title>
+		<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
+		<script>
+			$(function(){
+				//将B的内容替换掉A处的内容
+			 	$("p").replaceWith("<strong>aaaaaaaa</strong>"); 
+//			 	$("<strong>aaaaaaaa</strong>").replaceAll("p"); 
+			});
+		</script>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果." >AAAAAAAA</p>
+		<ul>
+		  <li title='苹果'>苹果</li>
+		  <li title='橘子'>橘子</li>
+		  <li title='菠萝'>菠萝</li>
+		</ul>
+	</body>
+</html>

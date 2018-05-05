@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Jquery的Ajax请求：get post</title>
+	</head>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		//	语法：jQuery.get(url, [data], [callback], [type])
+		//	语法：jQuery.post(url, [data], [callback], [type])
+		
+		
+		$(function() {
+			
+			$.get(
+				"${pageContext.request.contextPath}/url", 	//	请求的地址
+				{"name": "fgq","age": 24}, 	//	请求参数：json，没有填null
+				function(data) { 	//	成功之后的回调，data就是请求成功之后返回的数据
+					
+				},
+				"json" 	//	回调返回的数据类型：json、text、xml、html、script、 _default
+			);
+
+
+			$.post(
+				"${pageContext.request.contextPath}/url",
+				{"name": "fgq","age": 24},
+				function(data) { 
+
+				},
+				"json" 
+			);
+			
+		});
+	</script>
+
+</html>
