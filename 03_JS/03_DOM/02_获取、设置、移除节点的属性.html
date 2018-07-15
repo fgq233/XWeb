@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>方法：获取、设置、移除节点的属性</title>
+		<style>
+			.myCss {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="ddd" class="xxx">随风飘扬的笑</div>
+		<input type="button" value="获取节点属性" onclick="get()" />
+		<input type="button" value="设置节点的属性" onclick="set()" />
+		<input type="button" value="移除节点的属性" onclick="remove()" />
+	</body>
+
+	<script>
+		function get() {	//	获取属性
+			//	DOM Core
+			alert("id:" + document.getElementById("ddd").getAttribute("id"));
+			alert("class:" + document.getElementById("ddd").getAttribute("class"));
+			//	HTML 属性
+			alert("id:" + document.getElementById("ddd").id);
+			alert("class:" + document.getElementById("ddd").className);
+		}
+
+		function set() {	//	设置属性
+			document.getElementById("ddd").setAttribute("class", "myCss"); 	//	DOM Core
+			//	document.getElementById("ddd").className = "myCss"; 		//	HTML 属性
+		}
+
+		function remove() {	//	移除属性
+			document.getElementById("ddd").removeAttribute("class");	 	//	DOM Core
+			//document.getElementById("ddd").className = ""; 				//	HTML 属性
+		}
+	</script>
+
+</html>
