@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery.min.js"></script>
+    <title>JQuery 表单选择器</title>
+</head>
+<body>
+
+<form id="form1">
+    <textarea></textarea>   <br>
+
+    <select>
+        <option value="1">666</option>
+        <option value="2">888</option>
+    </select><br>
+
+    <input type="text" value="text"/><br>
+    <input type="password" value="666"/><br>
+    <input type="radio" value="1"/><br>
+    <input type="checkbox" value="1"/><br>
+    <input type="submit" value="提交"/><br>
+    <input type="image" src="https://fgq233.github.io/imgs/js/js.jpg" alt="图像形式提交按钮"/><br>
+    <input type="reset" value="重置"/><br>
+    <input type="button" value="按钮"/><br>
+    <input type="file"/><br>
+</form>
+
+<script>
+    $(function () {
+        console.log($("#form1 :input").length);     // 11
+        console.log($("#form1 :text").length);      // 1
+        console.log($("#form1 :password").length);  // 1
+        console.log($("#form1 :radio").length);     // 1
+        console.log($("#form1 :checkbox").length);  // 1
+        console.log($("#form1 :submit").length);    // 1
+        console.log($("#form1 :image").length);     // 1
+        console.log($("#form1 :reset").length);     // 1
+        console.log($("#form1 :button").length);    // 1
+        console.log($("#form1 :file").length);      // 1
+    });
+</script>
+</body>
+</html>
