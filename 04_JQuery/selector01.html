@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery.min.js"></script>
+    <title>JQuery 基本选择器</title>
+    <style>
+        .txt1 {
+            color: red;
+        }
+        .txt2 {
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div"></div>
+    <div class="cls"></div>
+    <div class="cls"></div>
+    <span></span><br>
+    <span></span><br>
+
+<script>
+    $(function () {
+        $("#div").html("id选择器");
+        $(".cls").html("类选择器");
+        $("span").html("元素选择器");
+        $("*").addClass("txt1");
+        $("#div, span").addClass("txt2");
+    });
+</script>
+</body>
+</html>
