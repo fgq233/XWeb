@@ -1,6 +1,6 @@
 常见事件
 1、加载事件
-	onload			网页文档加载完成事件、img加载完成事件
+    onload		网页文档加载完成事件、img加载完成事件
     onupload		离开网页事件
 
 2、onresize	窗口大小变化事件	
