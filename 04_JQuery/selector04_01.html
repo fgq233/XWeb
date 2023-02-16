@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery.min.js"></script>
+    <title>JQuery 过滤选择器</title>
+    <style>
+        .pinkStyle {background-color: #e44c65}
+    </style>
+</head>
+<body>
+
+<ul id="ul">
+    <li>第一行</li>
+    <li>第二行</li>
+    <li>第三行</li>
+    <li>第四行</li>
+    <li>第五行</li>
+</ul>
+<script>
+    $(function () {
+        console.log($("li:first").html());      // 第一行
+        console.log($("li").first().html());   // 第一行
+
+        console.log($("li:last").html());      // 第五行
+        console.log($("li").last().html());   // 第五行
+
+        console.log($("li:even").length);   // 3
+        console.log($("li:odd").length);    // 2
+
+        console.log($("li:eq(3)").html());  // 第四行
+        console.log($("li:not(:eq(3))").length);  // 4
+        console.log($("li:lt(3)").length);       // 3
+        console.log($("li:gt(3)").length);      // 1
+    });
+</script>
+</body>
+</html>
